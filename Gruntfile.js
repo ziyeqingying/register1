@@ -15,14 +15,23 @@ module.exports = function(grunt) {
         uglify: {
             release: {
                 files: {
-                    "dist/index.js": "index.js"
+                    "dist/index.min.js": "index.js"
                 }
             }
         },
+        useminPrepare: {
+            html: "index.html",
+            options: {
+                dest: "dist"
+            }
+        },
+        usemin: {
+            html: ["dist/index.html"]
+        }
     })
     grunt.loadNpmTasks("grunt-contrib-htmlmin");
     grunt.loadNpmTasks("grunt-contrib-cssmin");
     grunt.loadNpmTasks("grunt-contrib-uglify");
 
-    grunt.registerTask("minify", ['htmlmin', 'cssmin', 'uglify']);
+    grunt.registerTask("minify", ['useminPrepare', 'uglify','usemin', 'htmlmin', 'cssmin']);
 }
