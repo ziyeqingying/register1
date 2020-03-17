@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./index.css"/>
+</head>
+<body>
+    <div class="bg"></div>
+    <div class="content">
+        <div class="loginguide">
+            <h3>欢迎注册</h3>
+            <p>已有帐号？<span id="login_btn">登录</span></p>
+        </div>
+        <div class="regcontent">
+            <form class="regform">
+                <p  class="username" id="username">
+                    <label class="labelusername">用户名</label>
+                    <input type="text" name="userName" class="userinput" autocomplete="off" value="" placeholder="请设置用户名">
+                    <span class="passtip"></span>
+                    <span class="errortip"></span>
+                    <span class="sucesstip"></span>
+                </p>
+                <p  class="username" id="phone">
+                    <label class="labelusername">手机号</label>
+                    <input type="text" name="userName" class="userinput" autocomplete="off" value="" placeholder="用户登录和找回密码">
+                    <span class="passtip"></span>
+                    <span class="errortip"></span>
+                    <span class="sucesstip"></span>
+                </p>
+                <p  class="username" id="pwd">
+                    <label class="labelusername">密码</label>
+                    <input type="text" name="userName" class="userinput" autocomplete="off" value="" placeholder="请设置登录密码">
+                    <span class="passtip"></span>
+                    <span class="errortip"></span>
+                    <span class="sucesstip"></span>
+                </p>
+                <p  class="username" id="verify">
+                    <label class="labelusername">验证码</label>
+                    <input type="text" name="userName" class="userinput verifyCode" autocomplete="off" value="" placeholder="请设置登录密码">
+                    <input id="verifyCodeSend" type="button" value="获取验证码" class="passbutton" autocomplete="off">
+                </p>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+<script src="./index.js"></script>
+</html>
